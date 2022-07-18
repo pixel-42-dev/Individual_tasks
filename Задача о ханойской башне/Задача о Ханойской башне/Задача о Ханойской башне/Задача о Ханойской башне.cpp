@@ -3,7 +3,7 @@ using namespace std;
 
 void hanoi_towers(int quantity, int from, int to, int buf_peg) {	// Количество дисков, номер начального, конечного, среднего колышков
 	if (quantity != 0) {
-		hanoi_towers(quantity - 1, from, buf_peg, to);	// Передвигаем все диски кроме нижнего на буфферный диск
+		hanoi_towers(quantity - 1, from, buf_peg, to);	// Передвигаем все диски кроме нижнего на буфферный колышек
 		cout << from << " -> " << to << endl;			// Перемещаем последний диск
 		hanoi_towers(quantity - 1, buf_peg, to, from);	// Передвигаем все оставшиеся диски на финальный колышек
 	}
